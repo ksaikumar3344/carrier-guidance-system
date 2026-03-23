@@ -561,47 +561,9 @@ const Dashboard: React.FC = () => {
                   intensity < 0.75 ? 'bg-emerald-600' :
                   'bg-emerald-700';
                 
-                return (
-                  <div key={i} className="text-center">
-                    <div 
-                      className={`${bgColor} rounded-xl h-24 flex items-center justify-center mb-2 transition-all hover:scale-105 cursor-pointer`}
-                      title={`${day.commits} commits`}
-                    >
-                      <span className={`text-2xl font-black ${intensity > 0.5 ? 'text-white' : 'text-slate-700'}`}>
-                        {day.commits}
-                      </span>
-                    </div>
-                    <p className="text-xs font-bold text-slate-600">{day.day}</p>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="mt-6 flex items-center justify-center gap-4 text-xs text-slate-500">
-              <span>Less</span>
-              <div className="flex gap-1">
-                <div className="w-4 h-4 bg-slate-100 rounded"></div>
-                <div className="w-4 h-4 bg-emerald-200 rounded"></div>
-                <div className="w-4 h-4 bg-emerald-400 rounded"></div>
-                <div className="w-4 h-4 bg-emerald-600 rounded"></div>
-                <div className="w-4 h-4 bg-emerald-700 rounded"></div>
-              </div>
-              <span>More</span>
-            </div>
-          </div>
-        </>
-      )}
+                
 
-      {!selectedProject && projects.length > 0 && (
-        <div className="bg-slate-50 rounded-2xl p-12 text-center border-2 border-dashed border-slate-200">
-          <div className="w-20 h-20 bg-slate-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
-            <i className="fas fa-hand-pointer text-3xl text-slate-400"></i>
-          </div>
-          <h3 className="text-xl font-black text-slate-800 mb-2">Select a Project</h3>
-          <p className="text-slate-500 font-medium">
-            Choose a project from the dropdown above to view analytics
-          </p>
-        </div>
-      )}
+      
     </div>
   );
 };
